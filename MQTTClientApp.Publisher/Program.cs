@@ -9,6 +9,8 @@ namespace MQTTClientApp.Publisher
         public static async Task Main(string[] args)
         {
 
+            start:
+
             Console.WriteLine("Publisher starting ...");
 
             var mqttFactory = new MqttFactory();
@@ -45,6 +47,8 @@ namespace MQTTClientApp.Publisher
 
                 Console.ReadLine();
             }
+
+            goto start;
 
         }
 
